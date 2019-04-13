@@ -2,8 +2,6 @@ package com.example.inclassassignment08_shuangtingy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -44,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
                     valueInput.setText("");
                     Toast.makeText(MainActivity.this, "Cannot find key", Toast.LENGTH_SHORT).show();
                 }
-
-
             }
 
             @Override
@@ -54,16 +50,13 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
 
     public void writeData(View view) {
         String input = keyInput.getText().toString();
         String value = valueInput.getText().toString();
-
         myRef = myDatabase.getReference(input);
         myRef.setValue(value);
-
     }
 }
